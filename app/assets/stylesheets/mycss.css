@@ -16,6 +16,18 @@ SELECTION STYLING
 /*******************
 BODY STYLING
 *******************/
+#usercontent {
+	text-align: center;
+	line-height: 30px;
+
+}
+ul {
+	list-style-type: none;
+}
+
+#regbut {
+	margin-right: 64px;
+}
 
 * {
 	margin: 0;
@@ -194,6 +206,7 @@ CONTENT
 	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
 }
 
+
 .user-icon, .pass-icon {
 	width: 46px;
 	height: 47px;
@@ -316,4 +329,21 @@ FOOTER
 .login-form .footer .register:focus {
 	position: relative;
 	bottom: -1px;
+}
+
+#leftspan {
+	color: #131259;
+	font-weight: bold;
+}
+
+#leftspan2 {
+	color: #131259;
+	font-weight: bold;
+	text-decoration:underline;
+}
+
+
+p {
+	line-height: 22px;
+	margin-bottom: 5px;
 }

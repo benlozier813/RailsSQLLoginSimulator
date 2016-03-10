@@ -1,4 +1,4 @@
-<h1>Welcome! Please Register Below:</h1>
+<!-- <h1>Welcome! Please Register Below:</h1>
 <form method = 'post' action = '/user/record'>
 <p> Infoz </p>
 <p>-------------------------</p>
@@ -53,4 +53,36 @@
 <p>-------------------------</p>
 <input type = 'submit' value = 'Boom'/>
 
-</form>
+</form> -->
+
+
+<head>
+  <link rel='stylesheet' href='/app/assets/stylesheets/mycss.css' >
+</head>
+
+<div id="wrapper">
+
+	<form name="login-form" class="login-form" method = 'post' action = '/user/record'>
+
+		<div class="header">
+		<h1>Registration</h1>
+		<span>Create an account</span>
+		</div>
+
+		<div class="content">
+		<input name="username" type="text" class="input username" placeholder="Username" required />
+		<input name="password" type="password" class="input username" placeholder="Password" required/>
+    <input name="first" type="text" class="input password" placeholder="First Name"  />
+    <input name="last" type="text" class="input username" placeholder="Last Name" />
+    <input name="address" type="text" class="input password" placeholder="Address"  />
+    <input name="zip" type="text" class="input username" placeholder="Zip" />
+    <input name="country" type="text" class="input username" placeholder="Country" />
+    <input name="email" type="text" class="input password" placeholder="Email" />
+    <input name="phone1" type="text" class="input password" placeholder="Cell Phone"  />
+    <input name="phone2" type="text" class="input username" placeholder="Home Phone" />
+    <input name="phone3" type="text" class="input username" placeholder="Business Phone" />
+		</div>
+		<div class="footer">
+		<input id = 'regbut' type="submit" value="Submit" class="button" />
+	</form>
+</div>

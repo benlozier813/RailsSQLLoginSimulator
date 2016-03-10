@@ -1,36 +1,54 @@
-<h1>User#user_info</h1>
-<p>Find me in app/views/user/user_info.html.erb</p>
-<%= flash[:alert] %>
+
+<head>
+  <link rel='stylesheet' href='/app/assets/stylesheets/mycss.css' >
+</head>
 <hr>
+<div id="wrapper">
 
 
-Hello <%=@username%>
+    	<form name="login-form" class="login-form" method = 'get' action = '/user/signout'>
 
-<hr>
+    		<div class="header">
+    		<h1>User Info</h1>
+    		</div>
 
-<% @userinfo.each do |x| %>
-  First Name: <%=x.first%>
-  <br>
-  Last Name: <%=x.last%>
-    <br>
-  Address: <%=x.address%>
-     <br>
-  Zip Code: <%=x.zip%>
-      <br>
-  Country: <%=x.country%>
-        <br>
-  Email: <%=x.email%>
-<%end%>
-<br>
-<br>
-Phones:
-<ul>
-<% @phones.each do |x| %>
-  <li> <%=x.number%> </li>
-<%end%>
-</ul>
+    		<div id = 'usercontent' class="content">
+        <p> <span id = "leftspan2"> Hello:</span><p>
+          <p><%=@username%><p>
 
+          <br>
 
-<form action = '/user/signout' method = 'get'>
-  <input type = 'submit' value = 'Log out'/>
-</form>
+          <% @userinfo.each do |x| %>
+            <p id = space><span id = "leftspan2">First Name:</span></p>
+            <p><%=x.first%></p>
+
+            <p id = space><span id = "leftspan2">Last Name:</span> </p>
+            <p><%=x.last%></p>
+              <br>
+            <p id = space><span id = "leftspan2">Address:</span></p>
+            <p> <%=x.address%></p>
+            <p id = space><span id = "leftspan2">Zip Code:</span></p>
+            <p><%=x.zip%></p>
+            <p id = space><span id = "leftspan2">  Country:</span></p>
+            <p><%=x.country%></p>
+                  <br>
+            <p id = space><span id = "leftspan2"> Email: </span> </p>
+            <p><%=x.email%></p>
+          <%end%>
+          <br>
+          <br>
+            <span id = "leftspan2"> Phones: </span>
+          <ul>
+          <% @phones.each do |x| %>
+            <li> <%=x.number%> </li>
+          <%end%>
+          </ul>
+        </span>
+
+    		</div>
+    		<div class="footer">
+          <input id = 'regbut' type = 'submit' value = 'Log out' class="button"/>
+    	</form>
+    </div>
+  </div>
+</div>
