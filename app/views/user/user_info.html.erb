@@ -1,0 +1,36 @@
+<h1>User#user_info</h1>
+<p>Find me in app/views/user/user_info.html.erb</p>
+<%= flash[:alert] %>
+<hr>
+
+
+Hello <%=@username%>
+
+<hr>
+
+<% @userinfo.each do |x| %>
+  First Name: <%=x.first%>
+  <br>
+  Last Name: <%=x.last%>
+    <br>
+  Address: <%=x.address%>
+     <br>
+  Zip Code: <%=x.zip%>
+      <br>
+  Country: <%=x.country%>
+        <br>
+  Email: <%=x.email%>
+<%end%>
+<br>
+<br>
+Phones:
+<ul>
+<% @phones.each do |x| %>
+  <li> <%=x.number%> </li>
+<%end%>
+</ul>
+
+
+<form action = '/user/signout' method = 'get'>
+  <input type = 'submit' value = 'Log out'/>
+</form>

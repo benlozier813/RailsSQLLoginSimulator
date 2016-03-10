@@ -1,0 +1,53 @@
+<!-- <h1>Login</h1> -->
+<!-- <%= flash[:alert] %> -->
+
+<!--
+
+<form action = '/user/signin' method = 'get'>
+  <input type = 'text' name = 'loginid' placeholder='Username' required />
+  <input type = 'text' name = 'loginpw' placeholder='Password' required />
+  <br>
+  <hr>
+  <input type = 'submit' value = 'Boom'/>
+</form>
+
+
+<hr> -->
+<head>
+  <link rel='stylesheet' href='/app/assets/stylesheets/mycss.css' >
+</head>
+
+<div id="wrapper">
+
+	<form name="login-form" class="login-form" action='/user/signin' method="get">
+
+		<div class="header">
+		<h1>Login Form</h1>
+		<span>Sign into the LEARN database</span>
+		</div>
+
+		<div class="content">
+		<input name="loginid" type="text" class="input username" placeholder="Username" />
+		<div class="user-icon"></div>
+		<input name="loginpw" type="password" class="input password" placeholder="Password" />
+		<div class="pass-icon"></div>
+		</div>
+
+		<div class="footer">
+		<input type="submit" name="submit" value="Login" class="button" />
+    </form>
+    <form action='/user/register' method="get">
+		<input type="submit" name="submit" value="Register" class="register" />
+		</div>
+	</form>
+</div>
+
+
+
+<!--
+
+<form action = '/user/register' method = 'get'>
+  <input type = 'submit' value = 'Register'/>
+</form> -->
+
+<hr>
