@@ -1,0 +1,54 @@
+
+<head>
+  <link rel='stylesheet' href='/app/assets/stylesheets/mycss.css' >
+</head>
+<hr>
+<div id="wrapper">
+
+
+    	<form name="login-form" class="login-form" method = 'get' action = '/user/signout'>
+
+    		<div class="header">
+    		<h1>User Info</h1>
+    		</div>
+
+    		<div id = 'usercontent' class="content">
+        <p> <span id = "leftspan2"> Hello:</span><p>
+          <p><%=@username%><p>
+
+        <br>
+
+          <% @userinfo.each do |x| %>
+            <p id = space><span id = "leftspan2">First Name:</span></p>
+            <p><%=x.first%></p>
+
+            <p id = space><span id = "leftspan2">Last Name:</span> </p>
+            <p><%=x.last%></p>
+              <br>
+            <p id = space><span id = "leftspan2">Address:</span></p>
+            <p> <%=x.address%></p>
+            <p id = space><span id = "leftspan2">Zip Code:</span></p>
+            <p><%=x.zip%></p>
+            <p id = space><span id = "leftspan2">  Country:</span></p>
+            <p><%=x.country%></p>
+                  <br>
+            <p id = space><span id = "leftspan2"> Email: </span> </p>
+            <p><%=x.email%></p>
+          <%end%>
+          <br>
+          <br>
+            <span id = "leftspan2"> Phones: </span>
+          <ul>
+          <% @phones.each do |x| %>
+            <li> <%=x.number%> </li>
+          <%end%>
+          </ul>
+        </span>
+
+    		</div>
+    		<div class="footer">
+          <input id = 'regbut' type = 'submit' value = 'Log out' class="button"/>
+    	</form>
+    </div>
+  </div>
+</div>
